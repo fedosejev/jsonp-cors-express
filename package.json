@@ -1,0 +1,22 @@
+{
+  "name": "express-jsonp",
+  "version": "1.0.0",
+  "description": "Example of Express.js web server with JSONP support.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fedosejev/express-jsonp.git"
+  },
+  "author": "Artemij Fedosejev",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fedosejev/express-jsonp/issues"
+  },
+  "homepage": "https://github.com/fedosejev/express-jsonp",
+  "dependencies": {
+    "express": "^4.13.3"
+  }
+}
