@@ -1,6 +1,6 @@
 # Send JSON and JSONP with Express.js.
 
-Example of Express.js web server with JSONP support.
+Example of Express.js web server with JSONP and CORS support.
 
 ## Run
 
@@ -9,8 +9,9 @@ Example of Express.js web server with JSONP support.
 2. Navigate to `client/` directory and run `http-server`.
 3. Open `http://localhost:8080` in Google Chrome web browser.
 4. Open JavaScript console.
-5. Click `Get JSON` button to send __Cross-Origin XMLHttpRequest with JSON__.
-6. Click `Get JSONP` button to send __Cross-Origin XMLHttpRequest with JSONP__.
+5. Click `Get JSON` button to send Cross-Origin XMLHttpRequest __with JSON__.
+6. Click `Get JSONP` button to send Cross-Origin XMLHttpRequest __with JSONP__.
+7. Click `Get CORS` button to send Cross-Origin XMLHttpRequest __with JSON where CORS is enabled__.
 
 ## Learn more
 

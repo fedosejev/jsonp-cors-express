@@ -15,17 +15,24 @@
     <p>Open your web browser's JavaScript console, then click "Get JSON" and "Get JSONP" buttons.</p>
 
     <div class="row">
-      <div class="col-sm-6">
+      <div class="col-sm-4">
         <div class="stock">
 
           <button class="btn btn-default" data-ajax-get-json>Get JSON</button>
 
         </div>
       </div>
-      <div class="col-sm-6">
+      <div class="col-sm-4">
         <div class="stock">
 
           <button class="btn btn-default" data-ajax-get-jsonp>Get JSONP</button>
+
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="stock">
+
+          <button class="btn btn-default" data-ajax-get-cors>Get CORS</button>
 
         </div>
       </div>
@@ -46,7 +53,7 @@
     $('[data-ajax-get-json]').on('click', function () {
       var request = $.ajax({
         method: 'get',
-        url: 'http://localhost:8080/json',
+        url: 'http://localhost:8181/json',
         dataType: 'json'
       });
 
@@ -64,6 +71,21 @@
         method: 'get',
         url: 'http://localhost:8181/jsonp',
         dataType: 'jsonp'
+      });
+
+      request.done(function (data) {
+        console.log(data);
+      });
+
+      request.fail(function (error) {
+        console.log(error);
+      });
+    });
+
+    $('[data-ajax-get-cors]').on('click', function () {
+      var request = $.ajax({
+        method: 'get',
+        url: 'http://localhost:8181/cors'
       });
 
       request.done(function (data) {

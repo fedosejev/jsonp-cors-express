@@ -4,14 +4,27 @@ var PORT = 8181;
 
 app.get('/json', function (request, response) {
   response.json({
-    message: 'Welcome!'
+    message: 'Welcome, JSON!'
   });
 });
 
 // http://expressjs.com/en/api.html#res.jsonp
 app.get('/jsonp', function (request, response) {
   response.jsonp({
-    message: 'Welcome!'
+    message: 'Welcome, JSONP!'
+  });
+});
+
+// Middleware that enables CORS
+app.use(function (request, response, next) {
+  response.header("Access-Control-Allow-Origin", "*");
+  response.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+  next();
+});
+
+app.get('/cors', function (request, response) {
+  response.jsonp({
+    message: 'Welcome, CORS!'
   });
 });
 
