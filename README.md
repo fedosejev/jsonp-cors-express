@@ -23,3 +23,4 @@ Example of Express.js web server with JSONP and CORS support.
 ## Learn more
 
 + http://expressjs.com/en/api.html#res.jsonp
++ http://enable-cors.org
