@@ -1,0 +1,82 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Example of JSON and JSONP</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link href="style.css" rel="stylesheet">
+</head>
+<body>
+
+  <div class="container">
+
+    <p>Open your web browser's JavaScript console, then click "Get JSON" and "Get JSONP" buttons.</p>
+
+    <div class="row">
+      <div class="col-sm-6">
+        <div class="stock">
+
+          <button class="btn btn-default" data-ajax-get-json>Get JSON</button>
+
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="stock">
+
+          <button class="btn btn-default" data-ajax-get-jsonp>Get JSONP</button>
+
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      Built by <a href="http://artemij.com">Artemij Fedosejev</a>
+    </footer>
+
+  </div>
+
+  <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+  <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+  <script>
+
+  $(function () {
+
+    $('[data-ajax-get-json]').on('click', function () {
+      var request = $.ajax({
+        method: 'get',
+        url: 'http://localhost:8080/json',
+        dataType: 'json'
+      });
+
+      request.done(function (data) {
+        console.log(data);
+      });
+
+      request.fail(function (error) {
+        console.log(error);
+      });
+    });
+
+    $('[data-ajax-get-jsonp]').on('click', function () {
+      var request = $.ajax({
+        method: 'get',
+        url: 'http://localhost:8181/jsonp',
+        dataType: 'jsonp'
+      });
+
+      request.done(function (data) {
+        console.log(data);
+      });
+
+      request.fail(function (error) {
+        console.log(error);
+      });
+    });
+
+  });
+
+  </script>
+</body>
+</html>

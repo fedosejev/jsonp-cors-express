@@ -1,0 +1,29 @@
+* {
+  font-family: 'Lato', sans-serif;
+  text-align: center;
+  color: #333;
+}
+
+body {
+  padding-top: 50px;
+}
+
+p {
+  margin-bottom: 50px;
+  font-size: 20px;
+}
+
+a, a:focus, a:visited {
+  text-decoration: none;
+  color: #333;
+}
+
+a:hover {
+  text-decoration: none;
+  color: #ff6668;
+}
+
+footer {
+  margin: 50px 0;
+  font-weight: 200;
+}
