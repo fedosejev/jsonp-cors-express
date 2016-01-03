@@ -1,4 +1,4 @@
-# Send JSON and JSONP with Express.js.
+# Handle JSON, JSONP and CORS with Express.js.
 
 Example of Express.js web server with JSONP and CORS support.
 
