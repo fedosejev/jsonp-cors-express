@@ -11,3 +11,7 @@ Example of Express.js web server with JSONP support.
 4. Open JavaScript console.
 5. Click `Get JSON` button to send __Cross-Origin XMLHttpRequest with JSON__.
 6. Click `Get JSONP` button to send __Cross-Origin XMLHttpRequest with JSONP__.
+
+## Learn more
+
++ http://expressjs.com/en/api.html#res.jsonp
