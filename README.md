@@ -13,6 +13,13 @@ Example of Express.js web server with JSONP and CORS support.
 6. Click `Get JSONP` button to send Cross-Origin XMLHttpRequest __with JSONP__.
 7. Click `Get CORS` button to send Cross-Origin XMLHttpRequest __with JSON where CORS is enabled on the server__.
 
+
+| Request Path      | JSON | JSONP | CORS    |
+|---------|------|-------|---------|
+| `/json` | Yes  | No    | No      |
+| `/jsonp`| No   | Yes   | No |
+| `/cors` | Yes | No | Yes |
+
 ## Learn more
 
 + http://expressjs.com/en/api.html#res.jsonp
