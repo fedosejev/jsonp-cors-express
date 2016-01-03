@@ -15,7 +15,7 @@ Example of Express.js web server with JSONP and CORS support.
 
 ## Understand server endpoints
 
-| Request Path      | JSON | JSONP | CORS    |
+| Endpoint      | JSON | JSONP | CORS    |
 |---------|------|-------|---------|
 | `/json` | Yes  | No    | No      |
 | `/jsonp`| No   | Yes   | No |
