@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/fedosejev/express-jsonp",
   "dependencies": {
+    "cors": "^2.7.1",
     "express": "^4.13.3"
   }
 }

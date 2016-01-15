@@ -1,4 +1,5 @@
 var express = require('express');
+var cors = require('cors');
 var app = express();
 var PORT = 8181;
 
@@ -16,11 +17,7 @@ app.get('/jsonp', function (request, response) {
 });
 
 // Middleware that enables CORS
-app.use(function (request, response, next) {
-  response.header("Access-Control-Allow-Origin", "*");
-  response.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
-  next();
-});
+app.use(cors());
 
 app.get('/cors', function (request, response) {
   response.jsonp({
