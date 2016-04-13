@@ -83,10 +83,7 @@
     });
 
     $('[data-ajax-get-cors]').on('click', function () {
-      var request = $.ajax({
-        method: 'get',
-        url: 'http://localhost:8181/cors'
-      });
+      var request = $.get('http://localhost:8181/cors');
 
       request.done(function (data) {
         console.log(data);

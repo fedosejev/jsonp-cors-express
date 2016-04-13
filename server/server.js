@@ -20,7 +20,7 @@ app.get('/jsonp', function (request, response) {
 app.use(cors());
 
 app.get('/cors', function (request, response) {
-  response.jsonp({
+  response.json({
     message: 'Welcome, CORS!'
   });
 });
